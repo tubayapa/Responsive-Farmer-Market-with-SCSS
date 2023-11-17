@@ -1,0 +1,47 @@
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 20px;
+}
+
+.site-footer {
+  background-color: #7b9b60;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  width: 100vw;
+  height: 10rem;
+}
+
+.footer-info {
+  flex: 1;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+}
+.social-links a {
+  display: block;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-links {
+    margin-top: 15px;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,132 @@
+@import "colors";
+@import "media";
+@import "constants";
+
+%before-after-case {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  background-color: $orangered;
+  transition: 0.3s ease;
+  border-radius: $borderRadius;
+}
+
+.header {
+  background: url(/images/header-bg.png) no-repeat;
+  // filter: brightness(80%);
+  height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+  background-size: 100% 100%
+  ;
+
+  @include mobile{
+ 
+    max-width: 100%;
+    height:100%;
+
+  }
+
+ 
+  &-content {
+    display: inline-block;
+    flex-direction: column;
+    padding: 8rem 8rem;
+    
+    
+    @include tablet {
+      padding: 9rem 3rem;
+    }
+
+
+      h1 {
+        display: inline-block; 
+        border-radius: 5px;
+        background-color: $green;
+        font-size: 4rem;
+        color: $light;
+        text-shadow: 3px 3px #0e0e0e;
+        @include tablet {
+        font-size: 2rem;
+        
+        }
+      }
+        h2{
+        font-size: 4rem;
+        font-weight: bold;
+        color: $light;
+        text-shadow: 3px 3px #0e0e0e;
+        margin-top: 1rem;
+        border-radius: 5px;
+        background-color: $orangered;
+       
+       
+        @include mobile {
+          font-size: 2rem;
+          width: 80%;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        color: $light;
+        margin-top: 1rem;
+        font-weight: 700;
+        text-shadow: 2px 2px #0e0e0e;
+        background-color: $green;
+        padding: 0.5rem;
+        border-radius: 5px;
+        
+
+        @include mobile {
+          font-size: 1.2rem;
+        }
+      }
+
+      &-signup {
+        font-size: 1rem;
+        background-color: $green;
+        padding: 15px 30px;
+        border: none;
+        border-radius: $borderRadius;
+        margin-top: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s;
+
+        @include mobile {
+          padding: 5px 15px;}
+
+        a {
+          color: $light;
+          z-index: 2;
+          position: relative;
+          text-decoration: none;
+          font-size: 19px;
+
+          @include mobile {
+            font-size: 15px}
+        }
+        &::after {
+          @extend %before-after-case;
+          left: 50%;
+        }
+
+        &::before {
+          @extend %before-after-case;
+          right: 50%;
+        }
+
+        &:hover::after {
+          width: 50%;
+        }
+
+        &:hover::before {
+          width: 50%;
+        }
+      }
+    }
+  }
+

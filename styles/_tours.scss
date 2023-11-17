@@ -1,0 +1,62 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+  
+
+  @include mobile {
+      grid-template-columns: 1fr;
+  }
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: $green;
+  }
+
+  p {
+      font-size: 1.2em;
+  
+
+  @include mobile {
+     width: 80%;
+     text-align: center;
+  }
+}}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+
+  .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+
+      @include tablet {
+          grid-template-columns: 1fr 1fr;  // Tek satırda iki resim için
+      }
+
+      @include mobile {
+          grid-template-columns: 1fr;  
+          margin-bottom: 1rem;
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+      }
+  }
+}
