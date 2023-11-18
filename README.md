@@ -2,7 +2,8 @@ Farmer Market Website Landing Page
 🌾 Welcome to the Farmer Market Website landing page repository! 🍅
 
 
-![Uploading ezgif.com-optimize.gif…]()
+![ezgif com-optimize](https://github.com/tubayapa/Responsive-Farmer-Market-with-SCSS/assets/147662888/7bd161e1-8c22-4ad2-af84-27f420e2342e)
+
 
 
 
